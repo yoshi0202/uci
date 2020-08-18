@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - "./data/mysql:/var/lib/mysql"
+      - "./conf/mysql/my.cnf:/etc/my.cnf"
+    container_name: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=pass
+    ports:
+      - "3306:3306"
+  app:
+    build: src/.
+    volumes:
+      - "./src:/opt/src"
+    container_name: rails
+    ports:
+      - "3000:3000"

@@ -1,7 +1,7 @@
-require "./WaterDTO"
-require "./ElectricityDto"
-require "./MobilePhoneDTO"
-require "./GasDTO"
+require "WaterDTO"
+require "ElectricityDto"
+require "MobilePhoneDTO"
+require "GasDTO"
 
 class ChargeDTO
   attr_accessor :Water, :Electricity, :MobilePhone, :Gas

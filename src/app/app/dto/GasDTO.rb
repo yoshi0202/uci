@@ -1,3 +1,3 @@
-require './CostTemplateDTO'
+require 'CostTemplateDTO'
 class GasDTO < CostTemplateDTO
 end

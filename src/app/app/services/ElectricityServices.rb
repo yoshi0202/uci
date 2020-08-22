@@ -1,11 +1,15 @@
 require "ElectricityDTO"
 
 class ElectricityServices
-  def create_dto(cost)
+  def create_dto(id)
     dto = ElectricityDTO.new
-    dto.cost = cost
+    dto.cost = find(id).cost
 
     return dto
+  end
+
+  def find(id)
+    return ElectricitySupply.find(id)
   end
 
   def create_supply(charge_id, cost)
